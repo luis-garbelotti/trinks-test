@@ -19,7 +19,12 @@ export default async function changePosition(initialPosition: number[], vector: 
     }
   }
 
-  const direction: string = vector[0].toUpperCase();
+  let direction: string = vector[0].toUpperCase();
+
+  if (direction !== 'N' && direction !== 'S' && direction !== 'L' && direction !== 'O') return null;
+  if (vector == []) return null;
+  if (initialPosition == []) return null;
+  
   const applyCordinates = acceptedDirection[direction];
   applyCordinates();
   
