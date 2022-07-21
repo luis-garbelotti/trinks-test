@@ -1,8 +1,7 @@
-let finalPosition: number[];
 let currentPosition: number[];
 
-function changePosition(initialPosition: number[], vector: [string, number]) {
-  let finalPosition: string;
+export default async function changePosition(initialPosition: number[], vector: [string, number]) {
+  let finalPosition: number[];
   currentPosition = initialPosition;
 
   const acceptedDirection = {
@@ -22,8 +21,9 @@ function changePosition(initialPosition: number[], vector: [string, number]) {
 
   const direction: string = vector[0].toUpperCase();
   const applyCordinates = acceptedDirection[direction];
-  applyCordinates()
-  finalPosition = `(${currentPosition[0]}, ${currentPosition[1]})`; 
+  applyCordinates();
   
+  finalPosition = currentPosition; 
+
   return finalPosition;
 }
