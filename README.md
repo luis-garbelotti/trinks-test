@@ -21,8 +21,8 @@ Exemplo: Digamos que nosso ponto atual é (1,1) e recebe um vetor [N,10], ele pr
   ```bash
   npm run dev
   ```
-  
-8. You can test the cases running
+
+8. You can test the proposed cases running
   ```bash
-  npm t 
+  npm run test
   ```
